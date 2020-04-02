@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "node index.js",
     "production": "pm2 start index.js --name improved-umbrella-node",
-    "server": "node src/index.js"
+    "server": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
