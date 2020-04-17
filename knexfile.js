@@ -1,7 +1,10 @@
+require('dotenv');
+
+// CHANGE TO USE HEROKU DATABASE WITH PROCCESS.ENV
 module.exports = {
     client: 'postgresql',
     connection: {
-      database: 'knowledge',
+      database: 'improved_umbrella',
       user:     'postgres',
       password: 'root'
     },
