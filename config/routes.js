@@ -5,4 +5,11 @@ module.exports = app => {
     app.route('/users')
         .post(app.api.user.save)
         .get(app.api.user.get)
-}
+
+    app.route('/users/:username')
+        .get(app.api.user.getByUsername)
+
+    app.route('/expenses')
+        .post(app.api.expense.save)
+        .get(app.api.expense.get)
+} 
