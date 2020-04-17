@@ -6,6 +6,7 @@ exports.up = function(knex) {
             .inTable('expenses')
         table.string('item_name', 50).notNullable()
         table.float('item_value').notNullable()
+        table.integer('item_amount').defaultTo(1)
     })
 };
 

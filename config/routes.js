@@ -12,4 +12,8 @@ module.exports = app => {
     app.route('/expenses')
         .post(app.api.expense.save)
         .get(app.api.expense.get)
+
+    app.route('/items')
+        .post(app.api.item.save)
+        .get(app.api.item.get)
 } 
