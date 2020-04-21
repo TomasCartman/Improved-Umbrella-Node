@@ -1,7 +1,7 @@
 module.exports = app => {
     
     const save = (req, res) => {
-        const item = { ...req.body }
+        const item = [ ...req.body ]
 
         // CHECK IF THE EXPENSE EXISTS IN DATABASE
 

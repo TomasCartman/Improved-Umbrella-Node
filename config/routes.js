@@ -16,4 +16,7 @@ module.exports = app => {
     app.route('/items')
         .post(app.api.item.save)
         .get(app.api.item.get)
+
+    app.route('/signin')
+        .post(app.api.auth.signin)
 } 

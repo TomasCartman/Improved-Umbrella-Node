@@ -6,8 +6,8 @@ module.exports = app => {
         // CHECK IF THE USERNAME EXISTS ON DATABASE
 
         app.db('expenses')
-            .insert(expense)
-            .then(_ => res.status(204).send())
+            .insert(expense, ['id'])
+            .then(result => res.json(result))
             .catch(err => res.status(500).send(err))
     }
 
