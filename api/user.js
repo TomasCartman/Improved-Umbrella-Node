@@ -25,7 +25,7 @@ module.exports = app => {
 
         app.db('users')
             .insert(user)
-            .then(_ => res.status(204).redirect('/').send())
+            .then(_ => res.status(204).send())
             .catch(err => res.status(500).send(err))
     }
 
