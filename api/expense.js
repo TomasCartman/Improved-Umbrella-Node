@@ -18,5 +18,15 @@ module.exports = app => {
             .catch(err => res.status(500).send(err))
     }
 
-    return { save, get }
+    const getByUsername = (req, res) => {
+        const expense = { ...req.body }
+
+        app.db('expenses')
+            .select()
+            .where({ username: expense.username })
+            .then(expenses => res.json(expenses))
+            .catch(err => res.status(500).send(err))
+    }
+
+    return { save, get, getByUsername }
 }

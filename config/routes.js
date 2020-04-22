@@ -11,11 +11,17 @@ module.exports = app => {
 
     app.route('/expenses')
         .post(app.api.expense.save)
-        .get(app.api.expense.get)
+        .get(app.api.expense.getByUsername)
+
+    app.route('/allexpenses')
+        .post(app.api.expense.getByUsername)
 
     app.route('/items')
         .post(app.api.item.save)
-        .get(app.api.item.get)
+        .get(app.api.item.getByExpenseId)
+    
+    app.route('/allitems')
+        .post(app.api.item.getByExpenseId)
 
     app.route('/signin')
         .post(app.api.auth.signin)

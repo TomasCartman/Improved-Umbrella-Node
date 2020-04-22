@@ -18,5 +18,15 @@ module.exports = app => {
             .catch(err => res.status(500).send(err))
     }
 
-    return { save, get }
+    const getByExpenseId = (req, res) => {
+        const item = { ...req.body }
+
+        app.db('items')
+            .select()
+            .where({ expense_id: item.expense_id })
+            .then(items => res.json(items))
+            .catch(err => res.status(500).send(err))
+    }
+
+    return { save, get, getByExpenseId }
 }
