@@ -24,6 +24,7 @@ module.exports = app => {
         app.db('expenses')
             .select()
             .where({ username: expense.username })
+            .orderBy('expense_date')
             .then(expenses => res.json(expenses))
             .catch(err => res.status(500).send(err))
     }
