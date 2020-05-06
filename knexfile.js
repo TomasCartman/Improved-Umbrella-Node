@@ -1,4 +1,4 @@
-/*
+
 module.exports = {
     client: 'postgresql',
     connection: {
@@ -15,8 +15,8 @@ module.exports = {
       tableName: 'knex_migrations'
     }
 };
-*/
 
+/*
 module.exports = {
   client: 'postgresql',
   connection: {
@@ -32,3 +32,4 @@ module.exports = {
     tableName: 'knex_migrations'
   }
 };
+*/
